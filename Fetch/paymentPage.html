@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        * {
+            margin: 0%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+        }
+
+        h1 {
+            color: rebeccapurple;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            font-size: 1.5rem;
+            margin: 0%;
+        }
+
+        input {
+            height: 1rem;
+            width: 2rem;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-evenly;
+            height: 100vh;
+            align-items: center;
+            text-align: center;
+        }
+
+        p {
+            font-weight: 550;
+            color: rebeccapurple;
+            margin-bottom: 1rem;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: 550;
+            color: red;
+        }
+
+
+        article {
+            justify-content: space-evenly;
+            height: 15rem;
+            width: 10rem;
+            background-color: white;
+            border: 2.5px solid black;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1rem;
+            height: 2rem;
+            width: 15rem;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: rebeccapurple;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main id="main">
+        <article>
+            <h1>Select Payment Method</h1>
+            <input type="radio" name="payment" id="cod" required>
+            <label>Cash On Delivery</label><br><br>
+            <p>Currently we are only accepting cod orders</p>            
+            <span id="error-msg" class="error-msg"></span>
+            <button class="submit-btn" onclick="proceedToPay()">Proceed to Pay</button>
+        </article>
+    </main>
+    <script>
+        function proceedToPay() {
+            const paymentOptions = document.getElementsByName("payment");
+            let selectedPayment = null;
+
+            for (const option of paymentOptions) {
+                if (option.checked) {
+                    selectedPayment = option.value;
+                    break;
+                }
+            }
+
+            if (selectedPayment) {
+                // Remove the container content and show thank-you message
+                const container = document.querySelector("article");
+                container.innerHTML = `<h1>Thank you for shopping with us</h1>
+        <h2>Your order will be delivered soon<h2>`
+                container.classList.add("thank-you")
+            } else {
+                const errorMsg = document.getElementById("error-msg");
+                errorMsg.innerText = "Please select a payment method.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

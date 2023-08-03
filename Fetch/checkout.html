@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset {
+            padding: 0px;
+            width: 90%;
+            text-align: center;
+            border: 3px solid rebeccapurple;
+            border-radius: 1rem;
+            color: rebeccapurple;
+        }
+
+        input {
+            text-align: center;
+            font-size: 1rem;
+            height: 1.5rem;
+            width: 25rem;
+            border: 2px solis black;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: rebeccapurple;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        label {
+            font-size: 1.8rem;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 8rem;
+            height: 6rem;
+            padding: 1rem;
+        }
+
+
+        #submit {
+            margin: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            height: 2rem;
+            width: 15rem;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+        table {
+            margin-top: 3rem;
+            width: 90%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        td {
+            font-size: 1.2rem;
+        }
+
+        th,
+        .price {
+            font-weight: bold;
+            font-size: 2rem;
+            color: rebeccapurple;
+            padding: 1rem;
+        }
+
+        .price {
+            text-align: right;
+            padding-right: 2rem;
+        }
+
+        td:hover {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        img:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        #title {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="addressForm">
+        <main>
+            <fieldset>
+                <legend>
+                    <h1>Delivery Address</h1>
+                </legend>
+                <label for="name">Name:</label><br><br>
+                <input type="text" id="name" required><br><br>
+
+                <label for="phone">Phone Number:</label><br><br>
+                <input type="tel" id="phone" pattern="[0-9]{10}" required><br><br>
+
+                <label for="postal_code">Postal Code:</label><br><br>
+                <input type="text" id="postal_code" required><br><br>
+
+                <label for="address">Address (area and street):</label><br><br>
+                <input type="text" id="address" required><br><br>
+
+                <label for="city">City:</label><br><br>
+                <input type="text" id="city" required><br><br>
+
+                <label for="state">State:</label><br><br>
+                <input type="text" id="state" required><br><br>
+
+                <label for="landmark">Landmark (optional):</label><br><br>
+                <input type="text" id="landmark"><br><br>
+
+                <label for="alternativePhnNo">Alternative Phn no (optional):</label><br><br>
+                <input type="text" id="alternativePhnNo"><br><br>
+
+                <input id="submit" type="submit" value="Proceed to pay">
+            </fieldset>
+        </main>
+    </form>
+
+    <main>
+        <h1>Order Summary</h1>
+    </main>
+    <main>
+        <table id="cartItems">
+            <tr>
+                <th>Product</th>
+                <th id="title">Title</th>
+                <th>Count</th>
+                <th>Price</th>
+            </tr>
+        </table>
+    </main>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

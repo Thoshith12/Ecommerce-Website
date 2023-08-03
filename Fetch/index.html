@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login and Signup Page</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+  <main>
+    <article id="login-card">
+      <h2>Login</h2>
+      <input type="text" placeholder="Email" id="login-email">
+      <input type="password" placeholder="Password" id="login-password">
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+    </article>
+
+    <article id="signup-card" class="hidden">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Name" id="signup-name">
+      <input type="email" placeholder="Email" id="signup-email">
+      <input type="password" placeholder="Password" id="signup-password">
+      <button id="signup" onclick="signup()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+    </article>
+  </main>
+  <script src="login.js"></script>
+</body>
+
+</html>

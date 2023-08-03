@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="home" id="home">Home</li>
+            <li class="cat" id="smartphones">Smartphones</li>
+            <li class="cat" id="electronics">Electronics</li>
+            <li class="cat" id="laptops">Laptops</li>
+            <li class="cat" id="fragrances">Fragrances</li>
+            <li class="custom-dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown()">Select an Option</div>
+                <div class="dropdown-options">
+                    <div class="dropdown-option" onclick="dropDown('Skincare')">Skincare</div>
+                    <div class="dropdown-option" onclick="dropDown('Groceries')">Groceries</div>
+                    <div class="dropdown-option" onclick="dropDown('Home-Decoration')">Home-Decoration</div>
+                    <div class="dropdown-option" onclick="dropDown(this.innerHTML)">Men's Clothing</div>
+                    <div class="dropdown-option" onclick="dropDown('Jewelery')">Jewelery</div>
+                    <div class="dropdown-option" onclick="dropDown(this.innerHTML)">Women's clothing</div>
+                </div>
+            </li>
+            <li class="cart" id="cartNav">Cart<span id="cartCount" class="cart-count">0</span></li>
+        </ul>
+    </nav>
+    <main></main>
+    <div id="cartPage" class="cartPage">
+        <div id="cart">
+            <h5>Cart</h5>
+            <div id="cartItems"></div>
+            <div id="totalPrice"></div>
+            <div id="check">
+                <div class="checkOut">
+                    <div id="checkout" onclick="checkOut()">Checkout</div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="alert" class="alert"></div>
+    <script src="ecommerce.js"></script>
+
+</body>
+
+</html>

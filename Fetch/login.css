@@ -1,0 +1,46 @@
+body {
+    background-color: whitesmoke;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+article {
+    background-color: white;
+    border:2px solid black;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: .9rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
